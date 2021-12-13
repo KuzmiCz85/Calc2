@@ -47,11 +47,11 @@ class Kalkulacka
                 // Kontrola deleni nulou
                 if(!str_contains($vzorec, ' / 0')) {
                     
-                    // Zobrazi pamet
+                    // Vypise zadany priklad
                     $this->zobrazPamet();
                     echo (' = ');
                     
-                    // Spocita vzorec
+                    // Spocita vzorec a prida do prikladu vysledek
                     $vypocet = eval($vzorec);
                     echo($vypocet);
                 }
@@ -74,17 +74,17 @@ class Kalkulacka
         }
     }
     
+    // Zobrazí uživateli obsah paměti
+    public function zobrazPamet()
+    {
+        echo($this->pametNatext());
+    }
+    
     // Vymaze pamet
     public function vymazPamet()
     {
         session_destroy();
         header('Location: index.php');
         exit();
-    }
-    
-    // Zobrazí uživateli obsah paměti
-    public function zobrazPamet()
-    {
-        echo($this->pametNatext());
-    }
+    } 
 }
