@@ -67,11 +67,5 @@
                 </form>
             </div>
         </div>
-        <?php
-$string = "(11+10)*3";
-$math_string ="print (".$string.");";
-$result = eval($math_string);
-echo $result;
-?>
     </body>
 </html>
