@@ -3,9 +3,6 @@
 class Kalkulacka
 
 {
-
-    //private $vstup;
-
     // Vytvori pole pro ukladani zadani do pameti
     public function vytvorPamet()    
     {
